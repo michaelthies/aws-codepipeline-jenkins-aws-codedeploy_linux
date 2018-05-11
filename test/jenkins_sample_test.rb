@@ -11,10 +11,12 @@ class JenkinsSampleTest < MiniTest::Unit::TestCase
       :port => (ENV['TEST_PORT'] || '80').to_i,
       :path => '/index.html'
     }
+
     @webpage = Net::HTTP.get(URI::HTTP.build(uri_params))
   end
 
   def test_congratulations
     assert(@webpage =~ /good job/)
+    fail
   end
 end
