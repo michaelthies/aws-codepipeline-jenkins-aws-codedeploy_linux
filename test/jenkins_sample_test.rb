@@ -17,6 +17,5 @@ class JenkinsSampleTest < MiniTest::Unit::TestCase
 
   def test_congratulations
     assert(@webpage =~ /good job/)
-    fail
   end
 end
